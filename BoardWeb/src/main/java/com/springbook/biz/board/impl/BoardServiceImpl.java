@@ -22,6 +22,7 @@ public class BoardServiceImpl implements BoardService{
 //		}
 			
 			boardDAO.insertBoard(vo);
+//			boardDAO.insertBoard(vo);
 		
 	}
 
