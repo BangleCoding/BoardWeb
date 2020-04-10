@@ -7,6 +7,7 @@
 	<title>Login</title>
 	</head>
 	<body>
+		<center>
 		<h1>·Î±×ÀÎ</h1>
 		<hr>
 		<form action="login.do" method="post">
@@ -26,5 +27,6 @@
 			</tr>
 		</table>
 		</form>
+		</center>
 	</body>
 </html>

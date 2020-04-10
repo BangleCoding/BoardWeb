@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1>±Û µî·Ï</h1>
-	<a href="logout_proc.jsp">Log-out</a>
+	<a href="logout.do">Log-out</a>
 	<hr>
 	<form action="insertBoard.do" method="post">
 		<table border="1">
