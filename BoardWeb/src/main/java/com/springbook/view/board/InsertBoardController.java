@@ -12,13 +12,13 @@ import com.springbook.biz.board.impl.BoardDAO;
 @Controller
 public class InsertBoardController{ 
 
-	@RequestMapping(value="/insertBoard.do")
-	public void insertBoard(BoardVO vo) {
+	@RequestMapping("/insertBoard.do")
+	public String insertBoard(BoardVO vo, BoardDAO boardDAO) {
 		
 		System.out.println("게시글 등록 처리");
 		
-		BoardDAO boardDAO = new BoardDAO(); 
 		boardDAO.insertBoard(vo); 
+		return "redirect:getBoardList.do"; 
 		
 	}
 	
