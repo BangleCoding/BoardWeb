@@ -1,8 +1,13 @@
 package com.springbook.view.board;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.springbook.biz.board.BoardVO;
@@ -10,6 +15,15 @@ import com.springbook.biz.board.impl.BoardDAO;
 
 @Controller
 public class BoardController {
+	
+	//검색 조건 목록 설정
+	@ModelAttribute("conditionMap")
+	public Map<String, String> searchConditionMap(){
+		Map<String, String> conditionMap = new HashMap<String, String>();
+		conditionMap.put("제목", "TITLE"); 
+		conditionMap.put("내용", "CONTENT");
+		return conditionMap; 
+	}
 	
 	@RequestMapping("/insertBoard.do")
 	public String insertBoard(BoardVO vo, BoardDAO boardDAO) {
@@ -37,8 +51,9 @@ public class BoardController {
 		return "getBoard.jsp"; 
 	}
 	
+	//글 목록 검색
 	@RequestMapping("/getBoardList.do")
-	public String getBoardList(BoardVO vo, BoardDAO boardDAO, Model model)
+	public String getBoardList(BoardDAO boardDAO, Model model, BoardVO vo)
 	{
 		//Model 정보 저장
 		model.addAttribute("boardList", boardDAO.getBoardList(vo));
