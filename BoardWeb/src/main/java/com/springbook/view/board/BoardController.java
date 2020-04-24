@@ -8,12 +8,14 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.springbook.biz.board.BoardVO;
 import com.springbook.biz.board.impl.BoardDAO;
 
 @Controller
+@SessionAttributes("board")
 public class BoardController {
 	
 	//검색 조건 목록 설정
@@ -34,7 +36,13 @@ public class BoardController {
 	}
 	
 	@RequestMapping("/updateBoard.do")
-	public String updateBoard(BoardVO vo, BoardDAO boardDAO) {
+	public String updateBoard(@ModelAttribute("board") BoardVO vo, BoardDAO boardDAO) {
+		System.out.println(vo.getSeq());
+		System.out.println(vo.getTitle());
+		System.out.println(vo.getWriter());
+		System.out.println(vo.getContent());
+		System.out.println(vo.getRegDate());
+		System.out.println(vo.getCnt());
 		boardDAO.updateBoard(vo);
 		return "getBoardList.do"; 
 	}
