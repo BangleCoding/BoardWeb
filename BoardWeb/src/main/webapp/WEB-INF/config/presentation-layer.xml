@@ -75,4 +75,11 @@
 	<!-- LocaleResolver 등록 -->
 	<bean id="localResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver"></bean>
 	
+	<!-- LocalChangeInterceptor 등록 -->
+	<mvc:interceptors>
+		<bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+			<property name="paramName" value="lang"/>
+		</bean>
+	</mvc:interceptors>
+	
 </beans>

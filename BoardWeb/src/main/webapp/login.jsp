@@ -1,14 +1,18 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 <!DOCTYPE html>
 <html>
 	<head>
 	<meta charset="EUC-KR">
-	<title>Login</title>
+	<title><spring:message code="message.user.login.title"/></title>
 	</head>
 	<body>
 		<center>
-		<h1>로그인</h1>
+		<h1><spring:message code="message.user.login.title"/></h1>
+		<a href="login.do?lang=en">
+			<spring:message code="message.user.login.language.en"/></a>&nbsp;&nbsp;
+		<a href="login.do?lang=ko">
+		<spring:message code="message.user.login.language.ko"/></a>&nbsp;&nbsp;
 		<hr>
 		<form action="login.do" method="post">
 		<table border="1">
