@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Image to use:</p>
+<img id="lano" src="http://localhost:8080/biz/resources/img/lano.jpg" alt="Lano" width="100" height="200">
+<img id="mari" src="http://localhost:8080/biz/resources/img/mari.jpg" alt="Mari" width="150" height="200">
+
+<p>Canvas to fill:</p>
+<canvas id="myCanvas" width="800" height="600"
+style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML canvas tag.</canvas>
+
+<script>
+
+var c = document.getElementById("myCanvas");
+var ctx3 = c.getContext("2d");
+
+ctx3.beginPath();
+ctx3.arc(313,313,40,0,2*Math.PI);
+ctx3.stroke();
+
+var ctx2 = c.getContext("2d");
+ctx2.moveTo(0,600);
+ctx2.lineTo(800,0);
+ctx2.stroke();
+
+  var ctx = c.getContext("2d");
+  var img = document.getElementById("lano");
+  ctx.drawImage(img,520,0,100,200);
+  
+  var ctx4 = c.getContext("2d"); 
+  var img = document.getElementById("mari");
+  ctx.drawImage(img,10,400,120,180);
+</script>
+
+</html>
