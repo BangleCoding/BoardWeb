@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<meta charset="EUC-KR">
+	<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 	<title><spring:message code="message.user.login.title"/></title>
 	</head>
 	<body>
@@ -26,7 +26,7 @@
 			</tr>
 			<tr>
 				<td colspan="2" align="center">
-					<input type="submit" value="<spring:message code="message.user.login.id"/>"/>
+					<input type="submit" value="<spring:message code="message.user.login.loginBtn"/>"/>
 				</td>
 			</tr>
 		</table>
