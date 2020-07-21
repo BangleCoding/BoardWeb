@@ -10,6 +10,12 @@
 <canvas id="myCanvas" width="800" height="600"
 style="border:1px solid #d3d3d3;">
 Your browser does not support the HTML canvas tag.</canvas>
+<br/>
+<br/>
+<button onclick="moveup()">UP</button>
+<button onclick="movedown()">DOWN</button>
+<button onclick="moveleft()">LEFT</button>
+<button onclick="moveright()">RIGHT</button>
 
 <script>
 
@@ -32,6 +38,9 @@ ctx2.stroke();
   var ctx4 = c.getContext("2d"); 
   var img = document.getElementById("mari");
   ctx.drawImage(img,10,400,120,180);
+  
+  
+  
 </script>
 
 </html>

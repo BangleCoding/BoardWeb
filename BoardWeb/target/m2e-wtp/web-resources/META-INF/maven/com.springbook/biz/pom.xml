@@ -31,6 +31,18 @@
 			<artifactId>h2</artifactId>
 			<version>1.4.191</version>
 		</dependency>
+		<!-- Mybatis -->
+		<dependency>
+		    <groupId>org.mybatis</groupId>
+		    <artifactId>mybatis</artifactId>
+		    <version>3.3.1</version>
+		</dependency>
+		<!-- Ibatis -->
+		<dependency>
+		    <groupId>org.apache.ibatis</groupId>
+		    <artifactId>ibatis-core</artifactId>
+		    <version>3.0</version>
+		</dependency>
 		<!-- Spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>
