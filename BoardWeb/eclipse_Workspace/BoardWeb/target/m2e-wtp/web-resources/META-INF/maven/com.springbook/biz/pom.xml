@@ -25,12 +25,12 @@
 			<artifactId>aspectjweaver</artifactId>
 			<version>1.8.8</version>
 		</dependency>
-		<!-- H2 Database -->
+		<!-- H2 Database
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 			<version>1.4.191</version>
-		</dependency>
+		</dependency>  -->
 		<!-- Spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>
